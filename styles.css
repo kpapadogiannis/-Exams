@@ -1,0 +1,76 @@
+/* Custom Nautical Stylesheet & Animations */
+
+:root {
+  --primary-navy: #0b192c;
+  --ocean-blue: #0284c7;
+  --sea-emerald: #10b981;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  color: #1e293b;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Quiz Option Selection Transition */
+.quiz-opt-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accordion Transition Styles */
+.accordion-btn {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-btn .accordion-icon {
+  transition: transform 0.25s ease;
+}
+
+.accordion-content {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print styling for results */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print, header, nav, footer, #quiz-intro, .btn-action {
+    display: none !important;
+  }
+  #quiz-results, #result-details {
+    display: block !important;
+  }
+}
