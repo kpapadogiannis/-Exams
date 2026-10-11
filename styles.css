@@ -164,3 +164,23 @@ body {
     display: block !important;
   }
 }
+/* --- MOBILE QUIZ LAYOUT REFINEMENT --- */
+@media (max-width: 768px) {
+  /* Προσθήκη κενού/περιθωρίου δεξιά και αριστερά για να μην πιάνει όλη την οθόνη */
+  #view-quiz .bg-white.border.border-slate-200.rounded-3xl {
+    margin-left: 0.75rem !important;
+    margin-right: 0.75rem !important;
+    padding: 1rem !important;
+  }
+
+  /* Μικρότερα paddings στο header banner του quiz ώστε να χωράει χωρίς scroll */
+  #view-quiz .bg-gradient-to-r {
+    padding: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  #view-quiz .bg-gradient-to-r h2 {
+    font-size: 1.15rem !important;
+    line-height: 1.3 !important;
+  }
+}
